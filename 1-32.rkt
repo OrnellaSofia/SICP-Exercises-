@@ -1,12 +1,12 @@
-// Using Dr Racket/Scheme
-// Show that sum and product (Exercise 1.31) are both special cases of a still more general notion called accumulate
-// that combines a collection of terms, using some general accumulation function:
-// (accumulate combiner null-value term a next b)
+;; Using Dr Racket/Scheme
+;; Show that sum and product (Exercise 1.31) are both special cases of a still more general notion called accumulate
+;; that combines a collection of terms, using some general accumulation function:
+;; (accumulate combiner null-value term a next b)
 
-// Write accumulate and show how sum and
-// product can both be defined as simple calls to accumulate
+;; Write accumulate and show how sum and
+;; product can both be defined as simple calls to accumulate
 
-// Accumulate
+;; Accumulate
 
 (define (accumulate combiner null-value term a next b)
   (if (> a b)
@@ -15,7 +15,7 @@
       )
   )
   
-// Sum
+;; Sum
 
 (define (sum-combiner a b)
   (+ a b)
@@ -33,7 +33,7 @@
   (accumulate sum-combiner 0 sum-term a sum-next b)
   )
   
-  // Product
+  ;; Product
   
   (define (prod-combiner a b)
   (* a b)
